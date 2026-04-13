@@ -80,7 +80,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
     <div class="title">Last Call — Host Dashboard</div>
     <div class="subtitle">Truth-pack-aware host dashboard for Version A, B, and C live table management.</div>
     <div class="session-bar" id="activeSessionBar" style="display:none">
-      <span class="pill">Backend <span class="mono" id="backendPill">http://localhost:3000</span></span>
+      <span class="pill">Backend <span class="mono" id="backendPill">https://last-call-backend-rnc8.onrender.com</span></span>
       <span class="pill">Session Code <span class="code" id="sessionCode">------</span></span>
       <span class="pill">WebSocket <span id="wsStatus">Disconnected</span></span>
       <span class="pill">Truth Packs <span id="truthPackList">—</span></span>
@@ -95,7 +95,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
       <div class="grid two">
         <div class="field">
           <div class="label">Backend Base URL</div>
-          <input id="backendUrl" value="https://last-call-backend.onrender.com" placeholder="http://localhost:3000" />
+          <input id="backendUrl" value="https://last-call-backend-rnc8.onrender.com" placeholder="http://localhost:3000" />
         </div>
         <div class="field">
           <div class="label">Session Title</div>
@@ -145,7 +145,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
 <script>
 (() => {
   const state = {
-    backendUrl: 'http://localhost:3000',
+    backendUrl: 'https://last-call-backend-rnc8.onrender.com',
     session: null,
     ws: null,
     truthPackDebug: null,
