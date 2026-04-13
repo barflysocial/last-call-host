@@ -95,7 +95,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
       <div class="grid two">
         <div class="field">
           <div class="label">Backend Base URL</div>
-          <input id="backendUrl" value="http://localhost:3000" placeholder="http://localhost:3000" />
+          <input id="backendUrl" value="https://last-call-backend.onrender.com" placeholder="http://localhost:3000" />
         </div>
         <div class="field">
           <div class="label">Session Title</div>
