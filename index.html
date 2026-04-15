@@ -407,7 +407,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
                 <span class="pill">Joined ${joined}/6</span>
                 <span class="pill">Submitted ${submitted}</span>
                 <span class="pill">Winners ${winners}</span>
-                <span class="pill">Elapsed ${escapeHtml(formatSec(table.timers?.elapsedSec || 0))}</span>
+                <span class="pill" data-elapsed-pill="${table.tableId}" data-started-at="${table.startedAt || ""}">Elapsed ${escapeHtml(formatSec(table.timers?.elapsedSec || 0))}</span>
               </div>
             </div>
             <div class="table-actions">
@@ -477,6 +477,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
     }).join('');
 
     bindTableButtons();
+    repaintLiveTimers();
   }
 
   function bindTableButtons() {
