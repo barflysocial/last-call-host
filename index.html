@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Last Call — Host Dashboard (Truth-Pack Aware)</title>
+<title>Last Call — Host Dashboard · BUILD 2.5.17 (Truth-Pack Aware)</title>
 <style>
 :root{
   --bg:#0b0d14; --panel:#131826; --panel2:#171d2d; --line:rgba(255,255,255,.12);
@@ -125,7 +125,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
         <button class="secondary" id="lookupSessionBtn">Find Session</button>
       </div>
       <div class="mini" style="margin-top:12px">
-        This dashboard reads truth-pack availability from the backend and shows reveal payloads per table.
+        This dashboard reads truth-pack availability from the backend and shows reveal payloads per table. Detective mode is active: all connected players should receive the same unified investigation feed.
       </div>
       <div class="field" style="margin-top:14px">
         <div class="label">Broadcast Message To All Teams</div>
@@ -215,7 +215,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
   }
 
   function roleLabelFromId(roleId) {
-    const map = { bartender:'Bartender', security:'Security', host:'Karaoke Host', manager:'Manager', ex_lover:'Ex-Lover', sound_tech:'Sound Tech' };
+    const map = { bartender:'', security:'', host:'', manager:'', ex_lover:'', sound_tech:'' };
     return map[roleId] || roleId || '—';
   }
 
@@ -477,7 +477,7 @@ input,select{width:100%;border:1px solid var(--line);background:rgba(255,255,255
               <select data-truth-select="${table.tableId}">
                 ${availableTruthPacks().map(tp => `<option value="${tp}" ${table.truthPackId === tp ? 'selected' : ''}>${tp}</option>`).join('')}
               </select>
-              <button class="secondary" data-set-mode="${table.tableId}">Set Mode</button>
+              
               <button class="secondary" data-set-truth="${table.tableId}">Set Truth Pack</button>
               <button class="good" data-start="${table.tableId}">Start</button>
               <button class="warn" data-reveal="${table.tableId}">Reveal</button>
